@@ -9,5 +9,7 @@ def mortal_rabbits(n, m):
         alive.append(fib)
 
     return alive[-1]         
-
-print(mortal_rabbits(88, 20))
+with open('rosalind_fibd.txt') as f:
+    data = f.read()
+    n, m = data.split()
+print(mortal_rabbits(int(n), int(m)))
